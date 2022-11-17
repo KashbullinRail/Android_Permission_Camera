@@ -1,4 +1,4 @@
-package com.example.android_permission_camera
+package com.example.android_permission_camera.camera
 
 import android.content.Context
 import android.hardware.Camera
@@ -6,19 +6,19 @@ import android.util.AttributeSet
 import android.util.Log
 import android.view.SurfaceHolder
 import android.view.SurfaceView
+import com.example.android_permission_camera.calculatePreviewOrientation
 import java.io.IOException
 
 class CameraPreview @JvmOverloads constructor(
-        context: Context,
-        attrs: AttributeSet? = null,
-        defStyleAttr: Int = 0,
-        private val camera: Camera? = null,
-        private val cameraInfo: Camera.CameraInfo? = null,
-        private val displayOrientation: Int = 0
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyleAttr: Int = 0,
+    private val camera: Camera? = null,
+    private val cameraInfo: Camera.CameraInfo? = null,
+    private val displayOrientation: Int = 0
 ) : SurfaceView(context, attrs, defStyleAttr), SurfaceHolder.Callback {
 
     init {
-
         // Do not initialise if no camera has been set
         if (camera != null && cameraInfo != null) {
             // Install a SurfaceHolder.Callback so we get notified when the
@@ -70,4 +70,5 @@ class CameraPreview @JvmOverloads constructor(
     companion object {
         private val TAG = "CameraPreview"
     }
+
 }

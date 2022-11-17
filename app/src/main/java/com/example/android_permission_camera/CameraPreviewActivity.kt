@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.example.android_permission_camera.camera.CameraPreview
 
 private const val TAG = "CameraPreviewActivity"
 private const val CAMERA_ID = 0
